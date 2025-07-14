@@ -783,4 +783,4 @@ let adminPanel;
 function initializeAdmin() {
     adminPanel = new AdminPanel();
     adminPanel.initialize();
-}
+
