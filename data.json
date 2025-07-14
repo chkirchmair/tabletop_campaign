@@ -1,244 +1,338 @@
-
 {
   "hexes": {
-    "03.07": { "owner": "chaos", "terrain": "wald", "region": "Totenpass", "isPOI": false },
-    "04.07": { "owner": "tod", "terrain": "ebene", "region": "Totenpass", "isPOI": true },
-    "05.07": { "owner": "ordnung", "terrain": "berg", "region": "Totenpass", "isPOI": false },
-    "03.08": { "owner": "zerstoerung", "terrain": "sumpf", "region": "Blutmoor", "isPOI": false },
-    "04.08": { "owner": "neutral", "terrain": "ebene", "region": "Blutmoor", "isPOI": true },
-    "05.08": { "owner": "chaos", "terrain": "wald", "region": "Blutmoor", "isPOI": false },
-    "03.09": { "owner": "ordnung", "terrain": "ebene", "region": "Goldgipfel", "isPOI": false },
-    "04.09": { "owner": "neutral", "terrain": "berg", "region": "Goldgipfel", "isPOI": true },
-    "05.09": { "owner": "tod", "terrain": "wüste", "region": "Goldgipfel", "isPOI": false },
-    "06.07": { "owner": "neutral", "terrain": "wald", "region": "Schattenwald", "isPOI": false },
-    "06.08": { "owner": "zerstoerung", "terrain": "wald", "region": "Schattenwald", "isPOI": true },
-    "06.09": { "owner": "neutral", "terrain": "sumpf", "region": "Schattenwald", "isPOI": false }
+    "01.01": {
+      "owner": "neutral",
+      "terrain": "berg",
+      "region": "Westberge",
+      "isPOI": false
+    },
+    "01.02": {
+      "owner": "chaos",
+      "terrain": "wald",
+      "region": "Nordwälder",
+      "isPOI": false
+    },
+    "01.03": {
+      "owner": "neutral",
+      "terrain": "wald",
+      "region": "Nordwälder",
+      "isPOI": false
+    },
+    "01.04": {
+      "owner": "ordnung",
+      "terrain": "ebene",
+      "region": "Ostebenen",
+      "isPOI": false
+    },
+    "01.05": {
+      "owner": "neutral",
+      "terrain": "ebene",
+      "region": "Ostebenen",
+      "isPOI": false
+    },
+    "02.01": {
+      "owner": "chaos",
+      "terrain": "berg",
+      "region": "Westberge",
+      "isPOI": true
+    },
+    "02.02": {
+      "owner": "chaos",
+      "terrain": "wald",
+      "region": "Nordwälder",
+      "isPOI": false
+    },
+    "02.03": {
+      "owner": "neutral",
+      "terrain": "ebene",
+      "region": "Zentrum",
+      "isPOI": false
+    },
+    "02.04": {
+      "owner": "ordnung",
+      "terrain": "ebene",
+      "region": "Ostebenen",
+      "isPOI": false
+    },
+    "02.05": {
+      "owner": "tod",
+      "terrain": "sumpf",
+      "region": "Südsumpf",
+      "isPOI": false
+    },
+    "03.01": {
+      "owner": "neutral",
+      "terrain": "berg",
+      "region": "Westberge",
+      "isPOI": false
+    },
+    "03.02": {
+      "owner": "neutral",
+      "terrain": "wald",
+      "region": "Nordwälder",
+      "isPOI": false
+    },
+    "03.03": {
+      "owner": "neutral",
+      "terrain": "ebene",
+      "region": "Zentrum",
+      "isPOI": true
+    },
+    "03.04": {
+      "owner": "zerstoerung",
+      "terrain": "wüste",
+      "region": "Zentrum",
+      "isPOI": false
+    },
+    "03.05": {
+      "owner": "tod",
+      "terrain": "sumpf",
+      "region": "Südsumpf",
+      "isPOI": false
+    },
+    "04.01": {
+      "owner": "zerstoerung",
+      "terrain": "berg",
+      "region": "Westberge",
+      "isPOI": false
+    },
+    "04.02": {
+      "owner": "neutral",
+      "terrain": "ebene",
+      "region": "Zentrum",
+      "isPOI": false
+    },
+    "04.03": {
+      "owner": "neutral",
+      "terrain": "ebene",
+      "region": "Zentrum",
+      "isPOI": false
+    },
+    "04.04": {
+      "owner": "zerstoerung",
+      "terrain": "wüste",
+      "region": "Zentrum",
+      "isPOI": false
+    },
+    "04.05": {
+      "owner": "neutral",
+      "terrain": "sumpf",
+      "region": "Südsumpf",
+      "isPOI": false
+    },
+    "05.01": {
+      "owner": "zerstoerung",
+      "terrain": "wüste",
+      "region": "Westberge",
+      "isPOI": false
+    },
+    "05.02": {
+      "owner": "neutral",
+      "terrain": "ebene",
+      "region": "Zentrum",
+      "isPOI": false
+    },
+    "05.03": {
+      "owner": "neutral",
+      "terrain": "ebene",
+      "region": "Zentrum",
+      "isPOI": false
+    },
+    "05.04": {
+      "owner": "neutral",
+      "terrain": "wüste",
+      "region": "Zentrum",
+      "isPOI": false
+    },
+    "05.05": {
+      "owner": "tod",
+      "terrain": "sumpf",
+      "region": "Südsumpf",
+      "isPOI": true
+    },
+    "06.01": {
+      "owner": "neutral",
+      "terrain": "berg",
+      "region": "Westberge",
+      "isPOI": false
+    },
+    "06.02": {
+      "owner": "ordnung",
+      "terrain": "ebene",
+      "region": "Zentrum",
+      "isPOI": false
+    },
+    "06.03": {
+      "owner": "ordnung",
+      "terrain": "ebene",
+      "region": "Zentrum",
+      "isPOI": false
+    },
+    "06.04": {
+      "owner": "neutral",
+      "terrain": "ebene",
+      "region": "Ostebenen",
+      "isPOI": false
+    },
+    "06.05": {
+      "owner": "neutral",
+      "terrain": "sumpf",
+      "region": "Südsumpf",
+      "isPOI": false
+    },
+    "07.01": {
+      "owner": "neutral",
+      "terrain": "wald",
+      "region": "Nordwälder",
+      "isPOI": false
+    },
+    "07.02": {
+      "owner": "ordnung",
+      "terrain": "wald",
+      "region": "Nordwälder",
+      "isPOI": false
+    },
+    "07.03": {
+      "owner": "ordnung",
+      "terrain": "ebene",
+      "region": "Ostebenen",
+      "isPOI": true
+    },
+    "07.04": {
+      "owner": "neutral",
+      "terrain": "ebene",
+      "region": "Ostebenen",
+      "isPOI": false
+    },
+    "07.05": {
+      "owner": "neutral",
+      "terrain": "ebene",
+      "region": "Ostebenen",
+      "isPOI": false
+    }
   },
   "factions": {
-    "chaos": { "name": "Chaos", "points": 12, "color": "#a83232" },
-    "ordnung": { "name": "Ordnung", "points": 10, "color": "#32a852" },
-    "tod": { "name": "Tod", "points": 9, "color": "#7e7e7e" },
-    "zerstoerung": { "name": "Zerstörung", "points": 5, "color": "#a8772d" },
-    "neutral": { "name": "Neutral", "points": 0, "color": "#d0d0d0" }
+    "chaos": {
+      "name": "Chaos",
+      "points": 8,
+      "color": "#a83232"
+    },
+    "ordnung": {
+      "name": "Ordnung",
+      "points": 12,
+      "color": "#32a852"
+    },
+    "tod": {
+      "name": "Tod",
+      "points": 6,
+      "color": "#7e7e7e"
+    },
+    "zerstoerung": {
+      "name": "Zerstörung",
+      "points": 10,
+      "color": "#a8772d"
+    }
   },
   "pois": [
     {
-      "id": "04.07",
-      "name": "Holmgrad am Rüge",
-      "description": "Eine befestigte Stadt am großen Fluss",
-      "active": true,
-      "bonus": 5,
-      "status": "umkämpft",
-      "region": "Totenpass"
+      "id": "02.01",
+      "name": "Bergfestung des Chaos",
+      "description": "Eine alte Festung in den Bergen, von Chaos-Kriegern erobert",
+      "bonus": 2,
+      "type": "festung"
     },
     {
-      "id": "04.08",
-      "name": "Die Schwarze Feste",
-      "description": "Eine düstere Festung im Herzen des Moors",
-      "active": true,
-      "bonus": 5,
-      "status": "neutral",
-      "region": "Blutmoor"
+      "id": "03.03",
+      "name": "Zentraler Marktplatz",
+      "description": "Ein wichtiger Handelsplatz im Zentrum der Grenzlande",
+      "bonus": 1,
+      "type": "handel"
     },
     {
-      "id": "04.09",
-      "name": "Goldener Thron",
-      "description": "Der legendäre Sitz der Macht",
-      "active": false,
-      "bonus": 10,
-      "status": "verschlossen",
-      "region": "Goldgipfel"
+      "id": "05.05",
+      "name": "Nekropole der Untoten",
+      "description": "Ein düsterer Ort voller untoter Energie",
+      "bonus": 2,
+      "type": "nekropole"
     },
     {
-      "id": "06.08",
-      "name": "Turm der Schatten",
-      "description": "Ein mysteriöser Turm voller dunkler Magie",
-      "active": true,
-      "bonus": 5,
-      "status": "umkämpft",
-      "region": "Schattenwald"
+      "id": "07.03",
+      "name": "Tempel der Ordnung",
+      "description": "Ein heiliger Tempel, der Ordnung und Gerechtigkeit repräsentiert",
+      "bonus": 2,
+      "type": "tempel"
     }
   ],
   "regions": [
     {
-      "name": "Totenpass",
-      "description": "Ein düsterer Pass zwischen hohen Bergen",
-      "color": "#8B4513"
+      "name": "Nordwälder",
+      "description": "Dichte Waldgebiete im Norden, reich an Holz und Wild"
     },
     {
-      "name": "Blutmoor",
-      "description": "Ein gefährliches Sumpfgebiet voller Gefahren",
-      "color": "#654321"
+      "name": "Westberge",
+      "description": "Gebirgskette im Westen, schwer zugänglich aber reich an Mineralien"
     },
     {
-      "name": "Goldgipfel",
-      "description": "Die höchsten Berge des Reiches mit wertvollen Minen",
-      "color": "#FFD700"
+      "name": "Ostebenen",
+      "description": "Weite Ebenen im Osten, ideal für Landwirtschaft und Handel"
     },
     {
-      "name": "Schattenwald",
-      "description": "Ein dichter, dunkler Wald voller Geheimnisse",
-      "color": "#2F4F2F"
+      "name": "Südsumpf",
+      "description": "Sumpfland im Süden, gefährlich aber magisch kraftvoll"
+    },
+    {
+      "name": "Zentrum",
+      "description": "Das Herzland der Grenzlande, umkämpft von allen Fraktionen"
     }
   ],
   "history": [
     {
       "id": 1,
-      "date": "2025-01-10",
-      "system": "Age of Sigmar",
-      "winner": "tod",
+      "timestamp": "2024-01-15T10:30:00.000Z",
+      "gameSystem": "Age of Sigmar",
+      "winner": "ordnung",
       "loser": "chaos",
-      "region": "Totenpass",
-      "targetHex": "04.07",
-      "points": { "tod": 3, "chaos": 0 },
-      "bonuses": { "story": false, "paint": true },
-      "description": "Epische Schlacht um Holmgrad"
+      "hexId": "07.03",
+      "region": "Ostebenen",
+      "description": "Ordnung erobert den Tempel zurück",
+      "points": 3,
+      "paintBonus": true,
+      "storyBonus": false
     },
     {
       "id": 2,
-      "date": "2025-01-09",
-      "system": "Warhammer 40k",
-      "winner": "ordnung",
-      "loser": "zerstoerung",
-      "region": "Goldgipfel",
-      "targetHex": "03.09",
-      "points": { "ordnung": 3, "zerstoerung": 0 },
-      "bonuses": { "story": true, "paint": false },
-      "description": "Kampf um die Goldminen"
+      "timestamp": "2024-01-14T14:15:00.000Z",
+      "gameSystem": "Warhammer 40k",
+      "winner": "zerstoerung",
+      "loser": "neutral",
+      "hexId": "04.01",
+      "region": "Westberge",
+      "description": "Zerstörung breitet sich in den Bergen aus",
+      "points": 2,
+      "paintBonus": false,
+      "storyBonus": true
+    },
+    {
+      "id": 3,
+      "timestamp": "2024-01-13T16:45:00.000Z",
+      "gameSystem": "Age of Sigmar",
+      "winner": "tod",
+      "loser": "ordnung",
+      "hexId": "05.05",
+      "region": "Südsumpf",
+      "description": "Die Untoten verstärken ihre Nekropole",
+      "points": 3,
+      "paintBonus": true,
+      "storyBonus": true
     }
   ],
   "settings": {
     "mapWidth": 800,
     "mapHeight": 600,
-    "hexSize": 50,
+    "hexSize": 30,
     "adminMode": false,
     "campaignName": "Die Vier Fraktionen",
     "campaignDescription": "Eine epische Kampagne um die Vorherrschaft in den Grenzlanden"
   }
 }
-
-(cd "$(git rev-parse --show-toplevel)" && git apply --3way <<'EOF'
-diff --git a/data.json b/data.json
---- a/data.json
-+++ b/data.json
-@@ -0,0 +1,117 @@
-+{
-+  "hexes": {
-+    "03.07": { "owner": "chaos", "terrain": "wald", "region": "Totenpass", "isPOI": false },
-+    "04.07": { "owner": "tod", "terrain": "ebene", "region": "Totenpass", "isPOI": true },
-+    "05.07": { "owner": "ordnung", "terrain": "berg", "region": "Totenpass", "isPOI": false },
-+    "03.08": { "owner": "zerstoerung", "terrain": "sumpf", "region": "Blutmoor", "isPOI": false },
-+    "04.08": { "owner": "neutral", "terrain": "ebene", "region": "Blutmoor", "isPOI": true },
-+    "05.08": { "owner": "chaos", "terrain": "wald", "region": "Blutmoor", "isPOI": false },
-+    "03.09": { "owner": "ordnung", "terrain": "ebene", "region": "Goldgipfel", "isPOI": false },
-+    "04.09": { "owner": "neutral", "terrain": "berg", "region": "Goldgipfel", "isPOI": true },
-+    "05.09": { "owner": "tod", "terrain": "wüste", "region": "Goldgipfel", "isPOI": false },
-+    "06.07": { "owner": "neutral", "terrain": "wald", "region": "Schattenwald", "isPOI": false },
-+    "06.08": { "owner": "zerstoerung", "terrain": "wald", "region": "Schattenwald", "isPOI": true },
-+    "06.09": { "owner": "neutral", "terrain": "sumpf", "region": "Schattenwald", "isPOI": false }
-+  },
-+  "factions": {
-+    "chaos": { "name": "Chaos", "points": 12, "color": "#a83232" },
-+    "ordnung": { "name": "Ordnung", "points": 10, "color": "#32a852" },
-+    "tod": { "name": "Tod", "points": 9, "color": "#7e7e7e" },
-+    "zerstoerung": { "name": "Zerstörung", "points": 5, "color": "#a8772d" },
-+    "neutral": { "name": "Neutral", "points": 0, "color": "#d0d0d0" }
-+  },
-+  "pois": [
-+    {
-+      "id": "04.07",
-+      "name": "Holmgrad am Rüge",
-+      "description": "Eine befestigte Stadt am großen Fluss",
-+      "active": true,
-+      "bonus": 5,
-+      "status": "umkämpft",
-+      "region": "Totenpass"
-+    },
-+    {
-+      "id": "04.08",
-+      "name": "Die Schwarze Feste",
-+      "description": "Eine düstere Festung im Herzen des Moors",
-+      "active": true,
-+      "bonus": 5,
-+      "status": "neutral",
-+      "region": "Blutmoor"
-+    },
-+    {
-+      "id": "04.09",
-+      "name": "Goldener Thron",
-+      "description": "Der legendäre Sitz der Macht",
-+      "active": false,
-+      "bonus": 10,
-+      "status": "verschlossen",
-+      "region": "Goldgipfel"
-+    },
-+    {
-+      "id": "06.08",
-+      "name": "Turm der Schatten",
-+      "description": "Ein mysteriöser Turm voller dunkler Magie",
-+      "active": true,
-+      "bonus": 5,
-+      "status": "umkämpft",
-+      "region": "Schattenwald"
-+    }
-+  ],
-+  "regions": [
-+    {
-+      "name": "Totenpass",
-+      "description": "Ein düsterer Pass zwischen hohen Bergen",
-+      "color": "#8B4513"
-+    },
-+    {
-+      "name": "Blutmoor",
-+      "description": "Ein gefährliches Sumpfgebiet voller Gefahren",
-+      "color": "#654321"
-+    },
-+    {
-+      "name": "Goldgipfel",
-+      "description": "Die höchsten Berge des Reiches mit wertvollen Minen",
-+      "color": "#FFD700"
-+    },
-+    {
-+      "name": "Schattenwald",
-+      "description": "Ein dichter, dunkler Wald voller Geheimnisse",
-+      "color": "#2F4F2F"
-+    }
-+  ],
-+  "history": [
-+    {
-+      "id": 1,
-+      "date": "2025-01-10",
-+      "system": "Age of Sigmar",
-+      "winner": "tod",
-+      "loser": "chaos",
-+      "region": "Totenpass",
-+      "targetHex": "04.07",
-+      "points": { "tod": 3, "chaos": 0 },
-+      "bonuses": { "story": false, "paint": true },
-+      "description": "Epische Schlacht um Holmgrad"
-+    },
-+    {
-+      "id": 2,
-+      "date": "2025-01-09",
-+      "system": "Warhammer 40k",
-+      "winner": "ordnung",
-+      "loser": "zerstoerung",
-+      "region": "Goldgipfel",
-+      "targetHex": "03.09",
-+      "points": { "ordnung": 3, "zerstoerung": 0 },
-+      "bonuses": { "story": true, "paint": false },
-+      "description": "Kampf um die Goldminen"
-+    }
-+  ],
-+  "settings": {
-+    "mapWidth": 800,
-+    "mapHeight": 600,
-+    "hexSize": 50,
-+    "adminMode": false,
-+    "campaignName": "Die Vier Fraktionen",
-+    "campaignDescription": "Eine epische Kampagne um die Vorherrschaft in den Grenzlanden"
-+  }
-+}
-EOF
-)
 
