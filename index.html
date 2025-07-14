@@ -1,1 +1,288 @@
-
+(cd "$(git rev-parse --show-toplevel)" && git apply --3way <<'EOF'
+diff --git a/index.html b/index.html
+--- a/index.html
++++ b/index.html
+@@ -0,0 +1,281 @@
++<!DOCTYPE html>
++<html lang="de">
++<head>
++    <meta charset="UTF-8">
++    <meta name="viewport" content="width=device-width, initial-scale=1.0">
++    <title>Tabletop-Kampagnentool</title>
++    <link rel="preconnect" href="https://fonts.googleapis.com">
++    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
++    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
++    <link rel="stylesheet" href="style.css">
++</head>
++<body>
++    <div class="app-container">
++        <!-- Header -->
++        <header class="header">
++            <div class="header-content">
++                <h1 class="campaign-title" id="campaignTitle">Die Vier Fraktionen</h1>
++                <p class="campaign-description" id="campaignDescription">Eine epische Kampagne um die Vorherrschaft in den Grenzlanden</p>
++                
++                <!-- Admin Toggle -->
++                <div class="admin-controls">
++                    <button class="admin-toggle" id="adminToggle" type="button">
++                        🔧 Admin-Modus
++                    </button>
++                </div>
++            </div>
++        </header>
++
++        <!-- Main Content -->
++        <main class="main-content">
++            
++            <!-- Fraktionsübersicht -->
++            <section class="faction-overview" id="factionOverview">
++                <h2>Fraktionsstand</h2>
++                <div class="faction-grid" id="factionGrid">
++                    <!-- Wird dynamisch gefüllt -->
++                </div>
++            </section>
++
++            <!-- Kartenbereich -->
++            <section class="map-section">
++                <h2>Kampagnenkarte</h2>
++                <div class="map-container" id="mapContainer">
++                    <div class="map-controls">
++                        <button class="map-control" id="zoomIn">🔍+</button>
++                        <button class="map-control" id="zoomOut">🔍-</button>
++                        <button class="map-control" id="resetView">🎯</button>
++                    </div>
++                    <svg class="campaign-map" id="campaignMap" viewBox="0 0 800 600">
++                        <!-- Karte wird dynamisch generiert -->
++                    </svg>
++                </div>
++                
++                <!-- Kartenlegende -->
++                <div class="map-legend" id="mapLegend">
++                    <h3>Legende</h3>
++                    <div class="legend-content">
++                        <div class="legend-item">
++                            <span class="legend-color terrain-wald"></span>
++                            <span>Wald</span>
++                        </div>
++                        <div class="legend-item">
++                            <span class="legend-color terrain-berg"></span>
++                            <span>Berg</span>
++                        </div>
++                        <div class="legend-item">
++                            <span class="legend-color terrain-ebene"></span>
++                            <span>Ebene</span>
++                        </div>
++                        <div class="legend-item">
++                            <span class="legend-color terrain-sumpf"></span>
++                            <span>Sumpf</span>
++                        </div>
++                        <div class="legend-item">
++                            <span class="legend-color terrain-wueste"></span>
++                            <span>Wüste</span>
++                        </div>
++                        <div class="legend-item">
++                            <span class="legend-icon">⭐</span>
++                            <span>Point of Interest</span>
++                        </div>
++                    </div>
++                </div>
++            </section>
++
++            <div class="content-columns">
++                
++                <!-- Spielmeldung -->
++                <section class="game-form-section">
++                    <h2>Spiel melden</h2>
++                    <form class="game-form" id="gameForm">
++                        <div class="form-group">
++                            <label for="gameSystem">Spielsystem:</label>
++                            <input type="text" id="gameSystem" name="gameSystem" required 
++                                   placeholder="z.B. Age of Sigmar, Warhammer 40k">
++                        </div>
++
++                        <div class="form-row">
++                            <div class="form-group">
++                                <label for="winnerFaction">Siegerfraktion:</label>
++                                <select id="winnerFaction" name="winnerFaction" required>
++                                    <option value="">-- Wählen --</option>
++                                    <!-- Wird dynamisch gefüllt -->
++                                </select>
++                            </div>
++
++                            <div class="form-group">
++                                <label for="loserFaction">Besiegte Fraktion:</label>
++                                <select id="loserFaction" name="loserFaction" required>
++                                    <option value="">-- Wählen --</option>
++                                    <!-- Wird dynamisch gefüllt -->
++                                </select>
++                            </div>
++                        </div>
++
++                        <div class="form-group">
++                            <label for="targetRegion">Zielregion (optional):</label>
++                            <select id="targetRegion" name="targetRegion">
++                                <option value="">-- Keine spezielle Region --</option>
++                                <!-- Wird dynamisch gefüllt -->
++                            </select>
++                        </div>
++
++                        <div class="form-group">
++                            <label for="targetHex">Zielfeld (optional):</label>
++                            <input type="text" id="targetHex" name="targetHex" 
++                                   placeholder="z.B. 04.07 (klicke auf Karte)" readonly>
++                            <button type="button" class="clear-hex" id="clearHex">❌</button>
++                        </div>
++
++                        <div class="form-group">
++                            <label for="description">Beschreibung (optional):</label>
++                            <textarea id="description" name="description" rows="3" 
++                                      placeholder="Kurze Beschreibung der Schlacht..."></textarea>
++                        </div>
++
++                        <div class="bonus-options">
++                            <label class="checkbox-label">
++                                <input type="checkbox" id="paintBonus" name="paintBonus">
++                                <span class="checkmark"></span>
++                                Bemalbonus (+1 Punkt)
++                            </label>
++                            <label class="checkbox-label">
++                                <input type="checkbox" id="storyBonus" name="storyBonus">
++                                <span class="checkmark"></span>
++                                Storybeitrag (+1 Punkt)
++                            </label>
++                        </div>
++
++                        <button type="submit" class="submit-button">
++                            ⚔️ Kampf melden
++                        </button>
++                    </form>
++                </section>
++
++                <!-- Geschichte & POIs -->
++                <aside class="sidebar">
++                    
++                    <!-- Points of Interest -->
++                    <section class="poi-section" id="poiSection">
++                        <h3>Points of Interest</h3>
++                        <div class="poi-list" id="poiList">
++                            <!-- Wird dynamisch gefüllt -->
++                        </div>
++                    </section>
++
++                    <!-- Kampfhistorie -->
++                    <section class="history-section">
++                        <h3>Kürzliche Kämpfe</h3>
++                        <div class="history-list" id="historyList">
++                            <!-- Wird dynamisch gefüllt -->
++                        </div>
++                        <button class="show-more" id="showMoreHistory">Mehr anzeigen</button>
++                    </section>
++
++                </aside>
++            </div>
++        </main>
++
++        <!-- Admin Panel (versteckt) -->
++        <section class="admin-panel" id="adminPanel" style="display: none;">
++            <div class="admin-content">
++                <h2>🔧 Admin-Bereich</h2>
++                
++                <div class="admin-tabs">
++                    <button class="tab-button active" data-tab="hexes">Hexfelder</button>
++                    <button class="tab-button" data-tab="pois">POIs</button>
++                    <button class="tab-button" data-tab="settings">Einstellungen</button>
++                    <button class="tab-button" data-tab="data">Daten</button>
++                </div>
++
++                <!-- Hexfeld-Verwaltung -->
++                <div class="tab-content active" id="tab-hexes">
++                    <h3>Hexfeld bearbeiten</h3>
++                    <div class="hex-editor" id="hexEditor">
++                        <p>Klicke auf ein Hexfeld auf der Karte, um es zu bearbeiten.</p>
++                    </div>
++                </div>
++
++                <!-- POI-Verwaltung -->
++                <div class="tab-content" id="tab-pois">
++                    <h3>POI-Verwaltung</h3>
++                    <div class="poi-admin" id="poiAdmin">
++                        <!-- POI-Bearbeitungsformular -->
++                    </div>
++                </div>
++
++                <!-- Einstellungen -->
++                <div class="tab-content" id="tab-settings">
++                    <h3>Kampagneneinstellungen</h3>
++                    <form class="settings-form" id="settingsForm">
++                        <div class="form-group">
++                            <label for="adminCampaignName">Kampagnenname:</label>
++                            <input type="text" id="adminCampaignName" name="campaignName">
++                        </div>
++                        <div class="form-group">
++                            <label for="adminCampaignDescription">Beschreibung:</label>
++                            <textarea id="adminCampaignDescription" name="campaignDescription" rows="3"></textarea>
++                        </div>
++                        <button type="submit">Speichern</button>
++                    </form>
++                </div>
++
++                <!-- Datenmanagement -->
++                <div class="tab-content" id="tab-data">
++                    <h3>Datenmanagement</h3>
++                    <div class="data-controls">
++                        <button class="btn-secondary" id="exportData">📥 Daten exportieren</button>
++                        <button class="btn-secondary" id="importData">📤 Daten importieren</button>
++                        <button class="btn-danger" id="resetData">🗑️ Daten zurücksetzen</button>
++                    </div>
++                    <textarea class="data-textarea" id="dataTextarea" placeholder="JSON-Daten hier einfügen..."></textarea>
++                </div>
++
++                <button class="close-admin" id="closeAdmin">❌ Admin-Bereich schließen</button>
++            </div>
++        </section>
++
++        <!-- Toast-Nachrichten -->
++        <div class="toast-container" id="toastContainer">
++            <!-- Nachrichten werden hier eingefügt -->
++        </div>
++
++        <!-- Hex-Info Tooltip -->
++        <div class="hex-tooltip" id="hexTooltip" style="display: none;">
++            <div class="tooltip-content">
++                <h4 class="tooltip-title"></h4>
++                <p class="tooltip-info"></p>
++                <div class="tooltip-details"></div>
++            </div>
++        </div>
++    </div>
++
++    <!-- JavaScript Module -->
++    <script src="state.js"></script>
++    <script src="map.js"></script>
++    <script src="form.js"></script>
++    <script src="logic.js"></script>
++    <script src="admin.js"></script>
++    <script src="effects.js"></script>
++    
++    <!-- Initialisierung -->
++    <script>
++        // App-Initialisierung wenn DOM bereit ist
++        document.addEventListener('DOMContentLoaded', async () => {
++            try {
++                await campaignState.initialize();
++                initializeMap();
++                initializeForm();
++                initializeAdmin();
++                initializeEffects();
++                
++                console.log('🎮 Tabletop-Kampagnentool erfolgreich geladen!');
++            } catch (error) {
++                console.error('Fehler beim Initialisieren der App:', error);
++            }
++        });
++    </script>
++</body>
++</html>
++
+EOF
+)
