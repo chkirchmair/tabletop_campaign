@@ -14,7 +14,7 @@
         <!-- Header -->
         <header class="header">
             <div class="header-content">
-                <h1 class="campaign-title" id="campaignTitle">Die Vier Fraktionen</h1>
+                <h1 class="campaign-title" id="campaignTitle">Fantasy Kampagnen Karte</h1>
                 <p class="campaign-description" id="campaignDescription">Eine epische Kampagne um die Vorherrschaft in den Grenzlanden</p>
                 
                 <!-- Admin Toggle -->
@@ -45,8 +45,17 @@
                         <button class="map-control" id="zoomIn">🔍+</button>
                         <button class="map-control" id="zoomOut">🔍-</button>
                         <button class="map-control" id="resetView">🎯</button>
+                        <button class="map-control" id="regionModeToggle" title="Zu Region-Auswahl wechseln">🏰 Region-Modus</button>
                     </div>
-                    <svg class="campaign-map" id="campaignMap" viewBox="0 0 800 600">
+                    
+                    <!-- Region-Auswahl Display -->
+                    <div class="region-selection" id="regionSelection">
+                        <div class="selection-mode" id="selectionModeDisplay">Hex-Auswahl aktiv</div>
+                        <div class="selected-region" id="selectedRegionDisplay" style="display: none;">
+                            Keine Region ausgewählt
+                        </div>
+                    </div>
+                    <svg class="campaign-map" id="campaignMap" viewBox="0 0 1200 800">
                         <!-- Karte wird dynamisch generiert -->
                     </svg>
                 </div>
@@ -126,6 +135,13 @@
                             <input type="text" id="targetHex" name="targetHex" 
                                    placeholder="z.B. 04.07 (klicke auf Karte)" readonly>
                             <button type="button" class="clear-hex" id="clearHex">❌</button>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="targetRegion">Zielregion (optional):</label>
+                            <input type="text" id="targetRegion" name="targetRegion" 
+                                   placeholder="Region wählen (klicke auf Region)" readonly>
+                            <button type="button" class="clear-region" id="clearRegion">❌</button>
                         </div>
 
                         <div class="form-group">
