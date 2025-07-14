@@ -15,13 +15,20 @@ class CampaignMap {
         this.zoomMin = 0.5;
         this.zoomMax = 3;
         this.zoomStep = 0.2;
-        this.hexSize = 25; // Angepasst für 21x11 Grid
+        
+        // Angepasst für 21x11 Grid
+        this.gridWidth = 21;
+        this.gridHeight = 11;
+        this.hexSize = 20; // Kleinere Hexagone für bessere Darstellung
         this.hexes = new Map();
         this.regions = new Map();
         this.tooltip = null;
         
         // Hexagon-Koordinaten für ein regelmäßiges Sechseck
         this.hexCoords = this.generateHexCoords();
+        
+        // SVG Dimensionen berechnen
+        this.calculateSVGDimensions();
         
         // Terrain-zu-Farbe Mapping
         this.terrainColors = {
@@ -31,6 +38,21 @@ class CampaignMap {
             'sumpf': '#4a5c2a',
             'wüste': '#c4a484',
             'wueste': '#c4a484' // Fallback ohne Umlaut
+        };
+        
+        // Region-Definitionen für 21x11 Grid
+        this.regionDefinitions = {
+            'Nordwälder': { color: '#1a4d1a', description: 'Dichte Waldgebiete im Norden' },
+            'Drachenklauen-Gebirge': { color: '#5d4e75', description: 'Gefährliche Bergkette im Nordosten' },
+            'Sternenwald': { color: '#2d5016', description: 'Mystischer Wald mit uralten Geheimnissen' },
+            'Mondschein-Ebenen': { color: '#6b8e23', description: 'Weite Ebenen unter dem Mondlicht' },
+            'Schattenmoor': { color: '#3c4f39', description: 'Düsteres Sumpfgebiet' },
+            'Kristallsteppe': { color: '#8fbc8f', description: 'Steppenland mit Kristallvorkommen' },
+            'Nebeltal': { color: '#708090', description: 'Von Nebel verhülltes Tal' },
+            'Feuerlande': { color: '#cd853f', description: 'Heiße Wüstenregion im Süden' },
+            'Westberge': { color: '#696969', description: 'Gebirgskette im Westen' },
+            'Zentralebenen': { color: '#9acd32', description: 'Fruchtbare Ebenen im Zentrum' },
+            'Ostküste': { color: '#4682b4', description: 'Küstenregion im Osten' }
         };
     }
 
@@ -57,11 +79,29 @@ class CampaignMap {
     }
 
     /**
+     * Berechnet die SVG-Dimensionen für das 21x11 Grid
+     */
+    calculateSVGDimensions() {
+        const width = this.hexSize * 2;
+        const height = this.hexSize * Math.sqrt(3);
+        
+        // Berechne die maximalen Koordinaten
+        const maxX = (this.gridWidth - 1) * width * 0.75 + this.hexSize * 2;
+        const maxY = (this.gridHeight - 1) * height + height;
+        
+        this.svgWidth = maxX + 200; // Extra Padding
+        this.svgHeight = maxY + 200;
+    }
+
+    /**
      * Richtet das SVG-Element ein
      */
     setupSVG() {
         // SVG leeren
         this.svg.innerHTML = '';
+        
+        // SVG viewBox korrekt setzen
+        this.svg.setAttribute('viewBox', `0 0 ${this.svgWidth} ${this.svgHeight}`);
         
         // Hauptgruppe für Zoom/Pan erstellen
         this.mapGroup = document.createElementNS('http://www.w3.org/2000/svg', 'g');
@@ -70,8 +110,8 @@ class CampaignMap {
         
         // Hintergrund-Rect für Klick-Events
         const background = document.createElementNS('http://www.w3.org/2000/svg', 'rect');
-        background.setAttribute('width', '100%');
-        background.setAttribute('height', '100%');
+        background.setAttribute('width', this.svgWidth);
+        background.setAttribute('height', this.svgHeight);
         background.setAttribute('fill', 'transparent');
         background.addEventListener('click', () => this.clearSelection());
         this.mapGroup.appendChild(background);
@@ -148,11 +188,19 @@ class CampaignMap {
         // Farbe basierend auf Besitzer und Terrain
         const factionColor = this.getFactionColor(hexData.owner);
         const terrainColor = this.terrainColors[hexData.terrain] || '#555';
-        const fillColor = factionColor || terrainColor;
+        const fillColor = terrainColor; // Immer Terrain-Farbe als Füllung
+        
+        // Randfarbe basierend auf Besitzer oder Region
+        const regionColor = this.regionDefinitions[hexData.region]?.color || '#888';
+        const strokeColor = factionColor || regionColor;
+        const strokeWidth = factionColor ? '3' : '1';
         
         hexPath.setAttribute('fill', fillColor);
+        hexPath.setAttribute('stroke', strokeColor);
+        hexPath.setAttribute('stroke-width', strokeWidth);
         hexPath.setAttribute('data-faction', hexData.owner);
         hexPath.setAttribute('data-terrain', hexData.terrain);
+        hexPath.setAttribute('data-region', hexData.region);
         
         hexGroup.appendChild(hexPath);
         
@@ -219,19 +267,103 @@ class CampaignMap {
         
         this.hexes.clear();
         
-        // Neue Hexagone erstellen
-        Object.entries(state.hexes || {}).forEach(([hexId, hexData]) => {
-            const hexElement = this.createHexagon(hexId, hexData);
-            if (hexElement) {
-                this.mapGroup.appendChild(hexElement);
-                this.hexes.set(hexId, hexElement);
+        // Vollständiges 21x11 Grid erstellen
+        for (let col = 1; col <= this.gridWidth; col++) {
+            for (let row = 1; row <= this.gridHeight; row++) {
+                const hexId = `${col.toString().padStart(2, '0')}.${row.toString().padStart(2, '0')}`;
+                
+                // Verwende vorhandene Daten oder erstelle Standard-Hex
+                const hexData = state.hexes?.[hexId] || this.generateDefaultHex(col, row);
+                
+                const hexElement = this.createHexagon(hexId, hexData);
+                if (hexElement) {
+                    this.mapGroup.appendChild(hexElement);
+                    this.hexes.set(hexId, hexElement);
+                }
             }
-        });
+        }
         
         // Selektion aktualisieren falls nötig
         if (this.selectedHex && this.hexes.has(this.selectedHex)) {
             this.updateHexSelection();
         }
+    }
+    
+    /**
+     * Generiert Standard-Hex-Daten basierend auf Position
+     */
+    generateDefaultHex(col, row) {
+        // Bestimme Region basierend auf Position
+        const region = this.assignRegionByPosition(col, row);
+        
+        // Bestimme Terrain basierend auf Position
+        const terrain = this.assignTerrainByPosition(col, row);
+        
+        return {
+            owner: "neutral",
+            terrain: terrain,
+            region: region,
+            isPOI: false
+        };
+    }
+    
+    /**
+     * Weist Region basierend auf Hex-Position zu
+     */
+    assignRegionByPosition(col, row) {
+        // Norden (Reihen 1-3)
+        if (row <= 3) {
+            if (col <= 7) return "Nordwälder";
+            if (col <= 14) return "Drachenklauen-Gebirge";
+            return "Sternenwald";
+        }
+        
+        // Zentral-Nord (Reihen 4-5)
+        if (row <= 5) {
+            if (col <= 7) return "Westberge";
+            if (col <= 14) return "Mondschein-Ebenen";
+            return "Ostküste";
+        }
+        
+        // Zentrum (Reihen 6-7)
+        if (row <= 7) {
+            if (col <= 7) return "Schattenmoor";
+            if (col <= 14) return "Zentralebenen";
+            return "Kristallsteppe";
+        }
+        
+        // Süden (Reihen 8-11)
+        if (col <= 7) return "Schattenmoor";
+        if (col <= 14) return "Nebeltal";
+        return "Feuerlande";
+    }
+    
+    /**
+     * Weist Terrain basierend auf Hex-Position zu
+     */
+    assignTerrainByPosition(col, row) {
+        // Berge in den nördlichen und westlichen Regionen
+        if ((row <= 3 && col >= 8) || (col <= 3 && row >= 4 && row <= 8)) {
+            return "berg";
+        }
+        
+        // Wald in den nördlichen Regionen
+        if (row <= 4 && col <= 7) {
+            return "wald";
+        }
+        
+        // Sumpf in der südwestlichen Region
+        if (row >= 6 && col <= 7) {
+            return "sumpf";
+        }
+        
+        // Wüste im Südosten
+        if (row >= 8 && col >= 15) {
+            return "wueste";
+        }
+        
+        // Standard: Ebene
+        return "ebene";
     }
 
     /**
@@ -322,6 +454,12 @@ class CampaignMap {
                 const hexPath = hexElement.querySelector('.hex');
                 if (hexPath) {
                     hexPath.classList.remove('region-selected');
+                    // Setze ursprüngliche Randbreite zurück
+                    const hexData = campaignState.getHex(hexId);
+                    const factionColor = this.getFactionColor(hexData?.owner);
+                    const strokeWidth = factionColor ? '3' : '1';
+                    hexPath.setAttribute('stroke-width', strokeWidth);
+                    hexPath.setAttribute('stroke-opacity', '0.8');
                 }
             });
         }
@@ -336,16 +474,17 @@ class CampaignMap {
     updateRegionSelection() {
         if (!this.selectedRegion) return;
         
-        // Aktuelle State holen
-        const state = campaignState.getState();
-        
         // Alle Hexfelder der ausgewählten Region highlighten
-        Object.entries(state.hexes || {}).forEach(([hexId, hexData]) => {
-            if (hexData.region === this.selectedRegion && this.hexes.has(hexId)) {
-                const hexElement = this.hexes.get(hexId);
-                const hexPath = hexElement.querySelector('.hex');
+        this.hexes.forEach((hexElement, hexId) => {
+            const hexPath = hexElement.querySelector('.hex');
+            const hexData = campaignState.getHex(hexId);
+            
+            if (hexData && hexData.region === this.selectedRegion) {
                 if (hexPath) {
                     hexPath.classList.add('region-selected');
+                    // Verstärke die Randfarbe für Region-Auswahl
+                    hexPath.setAttribute('stroke-width', '4');
+                    hexPath.setAttribute('stroke-opacity', '1');
                 }
             }
         });
