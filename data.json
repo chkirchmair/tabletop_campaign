@@ -2,337 +2,1624 @@
   "hexes": {
     "01.01": {
       "owner": "neutral",
-      "terrain": "berg",
-      "region": "Westberge",
-      "isPOI": false
-    },
-    "01.02": {
-      "owner": "chaos",
-      "terrain": "wald",
-      "region": "Nordwälder",
-      "isPOI": false
-    },
-    "01.03": {
-      "owner": "neutral",
-      "terrain": "wald",
-      "region": "Nordwälder",
-      "isPOI": false
-    },
-    "01.04": {
-      "owner": "ordnung",
-      "terrain": "ebene",
-      "region": "Ostebenen",
-      "isPOI": false
-    },
-    "01.05": {
-      "owner": "neutral",
-      "terrain": "ebene",
-      "region": "Ostebenen",
+      "terrain": "wueste",
+      "region": "Drachenklauen-Gebirge",
       "isPOI": false
     },
     "02.01": {
-      "owner": "chaos",
-      "terrain": "berg",
-      "region": "Westberge",
-      "isPOI": true
-    },
-    "02.02": {
-      "owner": "chaos",
-      "terrain": "wald",
-      "region": "Nordwälder",
-      "isPOI": false
-    },
-    "02.03": {
       "owner": "neutral",
-      "terrain": "ebene",
-      "region": "Zentrum",
-      "isPOI": false
-    },
-    "02.04": {
-      "owner": "ordnung",
-      "terrain": "ebene",
-      "region": "Ostebenen",
-      "isPOI": false
-    },
-    "02.05": {
-      "owner": "tod",
-      "terrain": "sumpf",
-      "region": "Südsumpf",
+      "terrain": "berg",
+      "region": "Sternenwald",
       "isPOI": false
     },
     "03.01": {
       "owner": "neutral",
-      "terrain": "berg",
-      "region": "Westberge",
-      "isPOI": false
-    },
-    "03.02": {
-      "owner": "neutral",
       "terrain": "wald",
-      "region": "Nordwälder",
-      "isPOI": false
-    },
-    "03.03": {
-      "owner": "neutral",
-      "terrain": "ebene",
-      "region": "Zentrum",
-      "isPOI": true
-    },
-    "03.04": {
-      "owner": "zerstoerung",
-      "terrain": "wüste",
-      "region": "Zentrum",
-      "isPOI": false
-    },
-    "03.05": {
-      "owner": "tod",
-      "terrain": "sumpf",
-      "region": "Südsumpf",
+      "region": "Drachenklauen-Gebirge",
       "isPOI": false
     },
     "04.01": {
-      "owner": "zerstoerung",
-      "terrain": "berg",
-      "region": "Westberge",
-      "isPOI": false
-    },
-    "04.02": {
       "owner": "neutral",
-      "terrain": "ebene",
-      "region": "Zentrum",
-      "isPOI": false
-    },
-    "04.03": {
-      "owner": "neutral",
-      "terrain": "ebene",
-      "region": "Zentrum",
-      "isPOI": false
-    },
-    "04.04": {
-      "owner": "zerstoerung",
-      "terrain": "wüste",
-      "region": "Zentrum",
-      "isPOI": false
-    },
-    "04.05": {
-      "owner": "neutral",
-      "terrain": "sumpf",
-      "region": "Südsumpf",
+      "terrain": "wald",
+      "region": "Mondschein-Ebenen",
       "isPOI": false
     },
     "05.01": {
-      "owner": "zerstoerung",
-      "terrain": "wüste",
-      "region": "Westberge",
-      "isPOI": false
-    },
-    "05.02": {
       "owner": "neutral",
-      "terrain": "ebene",
-      "region": "Zentrum",
+      "terrain": "berg",
+      "region": "Schattenmoor",
       "isPOI": false
-    },
-    "05.03": {
-      "owner": "neutral",
-      "terrain": "ebene",
-      "region": "Zentrum",
-      "isPOI": false
-    },
-    "05.04": {
-      "owner": "neutral",
-      "terrain": "wüste",
-      "region": "Zentrum",
-      "isPOI": false
-    },
-    "05.05": {
-      "owner": "tod",
-      "terrain": "sumpf",
-      "region": "Südsumpf",
-      "isPOI": true
     },
     "06.01": {
       "owner": "neutral",
-      "terrain": "berg",
-      "region": "Westberge",
-      "isPOI": false
-    },
-    "06.02": {
-      "owner": "ordnung",
-      "terrain": "ebene",
-      "region": "Zentrum",
-      "isPOI": false
-    },
-    "06.03": {
-      "owner": "ordnung",
-      "terrain": "ebene",
-      "region": "Zentrum",
-      "isPOI": false
-    },
-    "06.04": {
-      "owner": "neutral",
-      "terrain": "ebene",
-      "region": "Ostebenen",
-      "isPOI": false
-    },
-    "06.05": {
-      "owner": "neutral",
       "terrain": "sumpf",
-      "region": "Südsumpf",
+      "region": "Kristallsteppe",
       "isPOI": false
     },
     "07.01": {
       "owner": "neutral",
       "terrain": "wald",
-      "region": "Nordwälder",
+      "region": "Schattenmoor",
+      "isPOI": false
+    },
+    "08.01": {
+      "owner": "neutral",
+      "terrain": "ebene",
+      "region": "Nebeltal",
+      "isPOI": false
+    },
+    "09.01": {
+      "owner": "neutral",
+      "terrain": "wald",
+      "region": "Schattenmoor",
+      "isPOI": false
+    },
+    "10.01": {
+      "owner": "neutral",
+      "terrain": "sumpf",
+      "region": "Donnergipfel",
+      "isPOI": false
+    },
+    "11.01": {
+      "owner": "neutral",
+      "terrain": "wueste",
+      "region": "Elfenreich",
+      "isPOI": false
+    },
+    "12.01": {
+      "owner": "neutral",
+      "terrain": "wueste",
+      "region": "Donnergipfel",
+      "isPOI": false
+    },
+    "13.01": {
+      "owner": "neutral",
+      "terrain": "ebene",
+      "region": "Zwergenfeste",
+      "isPOI": false
+    },
+    "14.01": {
+      "owner": "neutral",
+      "terrain": "sumpf",
+      "region": "Orkland",
+      "isPOI": false
+    },
+    "15.01": {
+      "owner": "neutral",
+      "terrain": "sumpf",
+      "region": "Magierturm-Region",
+      "isPOI": false
+    },
+    "16.01": {
+      "owner": "neutral",
+      "terrain": "ebene",
+      "region": "Magierturm-Region",
+      "isPOI": false
+    },
+    "17.01": {
+      "owner": "neutral",
+      "terrain": "ebene",
+      "region": "Ruinenstädte",
+      "isPOI": false
+    },
+    "18.01": {
+      "owner": "neutral",
+      "terrain": "sumpf",
+      "region": "Goldene Felder",
+      "isPOI": false
+    },
+    "19.01": {
+      "owner": "neutral",
+      "terrain": "wald",
+      "region": "Eiswind-Berge",
+      "isPOI": false
+    },
+    "20.01": {
+      "owner": "neutral",
+      "terrain": "sumpf",
+      "region": "Flammen-Wüste",
+      "isPOI": false
+    },
+    "21.01": {
+      "owner": "neutral",
+      "terrain": "sumpf",
+      "region": "Geisterhafen",
+      "isPOI": false
+    },
+    "01.02": {
+      "owner": "neutral",
+      "terrain": "sumpf",
+      "region": "Waldläufer-Territorium",
+      "isPOI": false
+    },
+    "02.02": {
+      "owner": "neutral",
+      "terrain": "wald",
+      "region": "Sternenwald",
+      "isPOI": false
+    },
+    "03.02": {
+      "owner": "neutral",
+      "terrain": "ebene",
+      "region": "Dunkle Sümpfe",
+      "isPOI": false
+    },
+    "04.02": {
+      "owner": "neutral",
+      "terrain": "wueste",
+      "region": "Mondschein-Ebenen",
+      "isPOI": false
+    },
+    "05.02": {
+      "owner": "neutral",
+      "terrain": "wueste",
+      "region": "Himmelsspitzen",
+      "isPOI": false
+    },
+    "06.02": {
+      "owner": "neutral",
+      "terrain": "ebene",
+      "region": "Verlorene Täler",
       "isPOI": false
     },
     "07.02": {
-      "owner": "ordnung",
+      "owner": "neutral",
+      "terrain": "wueste",
+      "region": "Nebeltal",
+      "isPOI": false
+    },
+    "08.02": {
+      "owner": "neutral",
+      "terrain": "sumpf",
+      "region": "Alte Straßen",
+      "isPOI": false
+    },
+    "09.02": {
+      "owner": "neutral",
+      "terrain": "berg",
+      "region": "Donnergipfel",
+      "isPOI": false
+    },
+    "10.02": {
+      "owner": "neutral",
       "terrain": "wald",
-      "region": "Nordwälder",
+      "region": "Kriegerhügel",
+      "isPOI": false
+    },
+    "11.02": {
+      "owner": "neutral",
+      "terrain": "sumpf",
+      "region": "Drachenruhe",
+      "isPOI": false
+    },
+    "12.02": {
+      "owner": "neutral",
+      "terrain": "ebene",
+      "region": "Silberseen",
+      "isPOI": false
+    },
+    "13.02": {
+      "owner": "neutral",
+      "terrain": "ebene",
+      "region": "Sturmküste",
+      "isPOI": false
+    },
+    "14.02": {
+      "owner": "neutral",
+      "terrain": "ebene",
+      "region": "Zwergenfeste",
+      "isPOI": true
+    },
+    "15.02": {
+      "owner": "neutral",
+      "terrain": "wald",
+      "region": "Orkland",
+      "isPOI": false
+    },
+    "16.02": {
+      "owner": "neutral",
+      "terrain": "sumpf",
+      "region": "Frostebenen",
+      "isPOI": false
+    },
+    "17.02": {
+      "owner": "neutral",
+      "terrain": "ebene",
+      "region": "Ruinenstädte",
+      "isPOI": false
+    },
+    "18.02": {
+      "owner": "neutral",
+      "terrain": "berg",
+      "region": "Glutberge",
+      "isPOI": false
+    },
+    "19.02": {
+      "owner": "neutral",
+      "terrain": "sumpf",
+      "region": "Windwiesen",
+      "isPOI": false
+    },
+    "20.02": {
+      "owner": "neutral",
+      "terrain": "wald",
+      "region": "Steinkreise",
+      "isPOI": false
+    },
+    "21.02": {
+      "owner": "neutral",
+      "terrain": "wueste",
+      "region": "Rabennest",
+      "isPOI": false
+    },
+    "01.03": {
+      "owner": "neutral",
+      "terrain": "berg",
+      "region": "Löwenland",
+      "isPOI": false
+    },
+    "02.03": {
+      "owner": "neutral",
+      "terrain": "wald",
+      "region": "Bärenwald",
+      "isPOI": false
+    },
+    "03.03": {
+      "owner": "neutral",
+      "terrain": "wald",
+      "region": "Löwenland",
+      "isPOI": false
+    },
+    "04.03": {
+      "owner": "neutral",
+      "terrain": "wald",
+      "region": "Himmelsspitzen",
+      "isPOI": false
+    },
+    "05.03": {
+      "owner": "neutral",
+      "terrain": "wald",
+      "region": "Mondschein-Ebenen",
+      "isPOI": false
+    },
+    "06.03": {
+      "owner": "neutral",
+      "terrain": "sumpf",
+      "region": "Wolfsschlucht",
       "isPOI": false
     },
     "07.03": {
-      "owner": "ordnung",
+      "owner": "neutral",
+      "terrain": "berg",
+      "region": "Adlerhorst",
+      "isPOI": false
+    },
+    "08.03": {
+      "owner": "neutral",
+      "terrain": "wueste",
+      "region": "Alte Straßen",
+      "isPOI": false
+    },
+    "09.03": {
+      "owner": "neutral",
       "terrain": "ebene",
-      "region": "Ostebenen",
-      "isPOI": true
+      "region": "Fuchshügel",
+      "isPOI": false
+    },
+    "10.03": {
+      "owner": "neutral",
+      "terrain": "wueste",
+      "region": "Fuchshügel",
+      "isPOI": false
+    },
+    "11.03": {
+      "owner": "neutral",
+      "terrain": "sumpf",
+      "region": "Drachenruhe",
+      "isPOI": false
+    },
+    "12.03": {
+      "owner": "neutral",
+      "terrain": "sumpf",
+      "region": "Sturmküste",
+      "isPOI": false
+    },
+    "13.03": {
+      "owner": "neutral",
+      "terrain": "sumpf",
+      "region": "Zwergenfeste",
+      "isPOI": false
+    },
+    "14.03": {
+      "owner": "neutral",
+      "terrain": "ebene",
+      "region": "Hirschtal",
+      "isPOI": false
+    },
+    "15.03": {
+      "owner": "neutral",
+      "terrain": "wueste",
+      "region": "Magierturm-Region",
+      "isPOI": false
+    },
+    "16.03": {
+      "owner": "neutral",
+      "terrain": "berg",
+      "region": "Alte Straßen",
+      "isPOI": false
+    },
+    "17.03": {
+      "owner": "neutral",
+      "terrain": "berg",
+      "region": "Hirschtal",
+      "isPOI": false
+    },
+    "18.03": {
+      "owner": "neutral",
+      "terrain": "wueste",
+      "region": "Drachenklauen-Gebirge",
+      "isPOI": false
+    },
+    "19.03": {
+      "owner": "neutral",
+      "terrain": "wald",
+      "region": "Eiswind-Berge",
+      "isPOI": false
+    },
+    "20.03": {
+      "owner": "neutral",
+      "terrain": "ebene",
+      "region": "Rabennest",
+      "isPOI": false
+    },
+    "21.03": {
+      "owner": "neutral",
+      "terrain": "wueste",
+      "region": "Alte Straßen",
+      "isPOI": false
+    },
+    "01.04": {
+      "owner": "neutral",
+      "terrain": "wueste",
+      "region": "Adlerhorst",
+      "isPOI": false
+    },
+    "02.04": {
+      "owner": "neutral",
+      "terrain": "sumpf",
+      "region": "Bärenwald",
+      "isPOI": false
+    },
+    "03.04": {
+      "owner": "neutral",
+      "terrain": "berg",
+      "region": "Kristallsteppe",
+      "isPOI": false
+    },
+    "04.04": {
+      "owner": "neutral",
+      "terrain": "sumpf",
+      "region": "Sternenwald",
+      "isPOI": false
+    },
+    "05.04": {
+      "owner": "neutral",
+      "terrain": "wueste",
+      "region": "Himmelsspitzen",
+      "isPOI": false
+    },
+    "06.04": {
+      "owner": "neutral",
+      "terrain": "sumpf",
+      "region": "Goldene Felder",
+      "isPOI": false
     },
     "07.04": {
       "owner": "neutral",
+      "terrain": "wald",
+      "region": "Steinkreise",
+      "isPOI": false
+    },
+    "08.04": {
+      "owner": "neutral",
       "terrain": "ebene",
-      "region": "Ostebenen",
+      "region": "Ruinenstädte",
+      "isPOI": false
+    },
+    "09.04": {
+      "owner": "neutral",
+      "terrain": "berg",
+      "region": "Kriegerhügel",
+      "isPOI": false
+    },
+    "10.04": {
+      "owner": "neutral",
+      "terrain": "wueste",
+      "region": "Kriegerhügel",
+      "isPOI": false
+    },
+    "11.04": {
+      "owner": "neutral",
+      "terrain": "wald",
+      "region": "Löwenland",
+      "isPOI": false
+    },
+    "12.04": {
+      "owner": "neutral",
+      "terrain": "wueste",
+      "region": "Steinkreise",
+      "isPOI": false
+    },
+    "13.04": {
+      "owner": "neutral",
+      "terrain": "berg",
+      "region": "Sternenwald",
+      "isPOI": false
+    },
+    "14.04": {
+      "owner": "neutral",
+      "terrain": "wueste",
+      "region": "Sturmküste",
+      "isPOI": false
+    },
+    "15.04": {
+      "owner": "neutral",
+      "terrain": "berg",
+      "region": "Alte Straßen",
+      "isPOI": false
+    },
+    "16.04": {
+      "owner": "neutral",
+      "terrain": "sumpf",
+      "region": "Verlorene Täler",
+      "isPOI": false
+    },
+    "17.04": {
+      "owner": "neutral",
+      "terrain": "sumpf",
+      "region": "Glutberge",
+      "isPOI": false
+    },
+    "18.04": {
+      "owner": "neutral",
+      "terrain": "berg",
+      "region": "Drachenruhe",
+      "isPOI": false
+    },
+    "19.04": {
+      "owner": "neutral",
+      "terrain": "berg",
+      "region": "Sturmküste",
+      "isPOI": false
+    },
+    "20.04": {
+      "owner": "neutral",
+      "terrain": "berg",
+      "region": "Steinkreise",
+      "isPOI": true
+    },
+    "21.04": {
+      "owner": "neutral",
+      "terrain": "wald",
+      "region": "Frostebenen",
+      "isPOI": false
+    },
+    "01.05": {
+      "owner": "neutral",
+      "terrain": "sumpf",
+      "region": "Verlorene Täler",
+      "isPOI": false
+    },
+    "02.05": {
+      "owner": "neutral",
+      "terrain": "sumpf",
+      "region": "Flammen-Wüste",
+      "isPOI": false
+    },
+    "03.05": {
+      "owner": "neutral",
+      "terrain": "wald",
+      "region": "Windwiesen",
+      "isPOI": false
+    },
+    "04.05": {
+      "owner": "neutral",
+      "terrain": "wueste",
+      "region": "Himmelsspitzen",
+      "isPOI": false
+    },
+    "05.05": {
+      "owner": "neutral",
+      "terrain": "ebene",
+      "region": "Löwenland",
+      "isPOI": false
+    },
+    "06.05": {
+      "owner": "neutral",
+      "terrain": "sumpf",
+      "region": "Glutberge",
       "isPOI": false
     },
     "07.05": {
       "owner": "neutral",
+      "terrain": "wald",
+      "region": "Sternenwald",
+      "isPOI": true
+    },
+    "08.05": {
+      "owner": "neutral",
+      "terrain": "wald",
+      "region": "Verlorene Täler",
+      "isPOI": false
+    },
+    "09.05": {
+      "owner": "neutral",
+      "terrain": "wald",
+      "region": "Mondschein-Ebenen",
+      "isPOI": false
+    },
+    "10.05": {
+      "owner": "neutral",
+      "terrain": "sumpf",
+      "region": "Flammen-Wüste",
+      "isPOI": false
+    },
+    "11.05": {
+      "owner": "neutral",
+      "terrain": "berg",
+      "region": "Geisterhafen",
+      "isPOI": false
+    },
+    "12.05": {
+      "owner": "neutral",
+      "terrain": "wald",
+      "region": "Kriegerhügel",
+      "isPOI": false
+    },
+    "13.05": {
+      "owner": "neutral",
+      "terrain": "wueste",
+      "region": "Geisterhafen",
+      "isPOI": false
+    },
+    "14.05": {
+      "owner": "neutral",
       "terrain": "ebene",
-      "region": "Ostebenen",
+      "region": "Windwiesen",
+      "isPOI": false
+    },
+    "15.05": {
+      "owner": "neutral",
+      "terrain": "sumpf",
+      "region": "Flammen-Wüste",
+      "isPOI": false
+    },
+    "16.05": {
+      "owner": "neutral",
+      "terrain": "berg",
+      "region": "Bärenwald",
+      "isPOI": true
+    },
+    "17.05": {
+      "owner": "neutral",
+      "terrain": "wald",
+      "region": "Kriegerhügel",
+      "isPOI": false
+    },
+    "18.05": {
+      "owner": "neutral",
+      "terrain": "sumpf",
+      "region": "Kristallsteppe",
+      "isPOI": false
+    },
+    "19.05": {
+      "owner": "neutral",
+      "terrain": "ebene",
+      "region": "Zwergenfeste",
+      "isPOI": false
+    },
+    "20.05": {
+      "owner": "neutral",
+      "terrain": "sumpf",
+      "region": "Wolfsschlucht",
+      "isPOI": false
+    },
+    "21.05": {
+      "owner": "neutral",
+      "terrain": "wueste",
+      "region": "Nebeltal",
+      "isPOI": false
+    },
+    "01.06": {
+      "owner": "neutral",
+      "terrain": "wueste",
+      "region": "Ruinenstädte",
+      "isPOI": false
+    },
+    "02.06": {
+      "owner": "neutral",
+      "terrain": "wald",
+      "region": "Bärenwald",
+      "isPOI": false
+    },
+    "03.06": {
+      "owner": "neutral",
+      "terrain": "sumpf",
+      "region": "Flammen-Wüste",
+      "isPOI": false
+    },
+    "04.06": {
+      "owner": "neutral",
+      "terrain": "wald",
+      "region": "Ruinenstädte",
+      "isPOI": false
+    },
+    "05.06": {
+      "owner": "neutral",
+      "terrain": "wald",
+      "region": "Magierturm-Region",
+      "isPOI": false
+    },
+    "06.06": {
+      "owner": "neutral",
+      "terrain": "wald",
+      "region": "Kristallsteppe",
+      "isPOI": false
+    },
+    "07.06": {
+      "owner": "neutral",
+      "terrain": "berg",
+      "region": "Donnergipfel",
+      "isPOI": false
+    },
+    "08.06": {
+      "owner": "neutral",
+      "terrain": "ebene",
+      "region": "Orkland",
+      "isPOI": true
+    },
+    "09.06": {
+      "owner": "neutral",
+      "terrain": "ebene",
+      "region": "Bärenwald",
+      "isPOI": false
+    },
+    "10.06": {
+      "owner": "neutral",
+      "terrain": "berg",
+      "region": "Himmelsspitzen",
+      "isPOI": false
+    },
+    "11.06": {
+      "owner": "neutral",
+      "terrain": "ebene",
+      "region": "Löwenland",
+      "isPOI": false
+    },
+    "12.06": {
+      "owner": "neutral",
+      "terrain": "ebene",
+      "region": "Alte Straßen",
+      "isPOI": false
+    },
+    "13.06": {
+      "owner": "neutral",
+      "terrain": "sumpf",
+      "region": "Goldene Felder",
+      "isPOI": false
+    },
+    "14.06": {
+      "owner": "neutral",
+      "terrain": "sumpf",
+      "region": "Elfenreich",
+      "isPOI": false
+    },
+    "15.06": {
+      "owner": "neutral",
+      "terrain": "wald",
+      "region": "Sturmküste",
+      "isPOI": false
+    },
+    "16.06": {
+      "owner": "neutral",
+      "terrain": "wueste",
+      "region": "Dunkle Sümpfe",
+      "isPOI": false
+    },
+    "17.06": {
+      "owner": "neutral",
+      "terrain": "berg",
+      "region": "Geisterhafen",
+      "isPOI": false
+    },
+    "18.06": {
+      "owner": "neutral",
+      "terrain": "wald",
+      "region": "Glutberge",
+      "isPOI": false
+    },
+    "19.06": {
+      "owner": "neutral",
+      "terrain": "wueste",
+      "region": "Mondschein-Ebenen",
+      "isPOI": true
+    },
+    "20.06": {
+      "owner": "neutral",
+      "terrain": "ebene",
+      "region": "Eiswind-Berge",
+      "isPOI": false
+    },
+    "21.06": {
+      "owner": "neutral",
+      "terrain": "sumpf",
+      "region": "Alte Straßen",
+      "isPOI": false
+    },
+    "01.07": {
+      "owner": "neutral",
+      "terrain": "sumpf",
+      "region": "Kriegerhügel",
+      "isPOI": false
+    },
+    "02.07": {
+      "owner": "neutral",
+      "terrain": "berg",
+      "region": "Nebeltal",
+      "isPOI": false
+    },
+    "03.07": {
+      "owner": "neutral",
+      "terrain": "wueste",
+      "region": "Flammen-Wüste",
+      "isPOI": false
+    },
+    "04.07": {
+      "owner": "neutral",
+      "terrain": "wueste",
+      "region": "Magierturm-Region",
+      "isPOI": false
+    },
+    "05.07": {
+      "owner": "neutral",
+      "terrain": "berg",
+      "region": "Geisterhafen",
+      "isPOI": false
+    },
+    "06.07": {
+      "owner": "neutral",
+      "terrain": "sumpf",
+      "region": "Sturmküste",
+      "isPOI": false
+    },
+    "07.07": {
+      "owner": "neutral",
+      "terrain": "berg",
+      "region": "Flammen-Wüste",
+      "isPOI": false
+    },
+    "08.07": {
+      "owner": "neutral",
+      "terrain": "ebene",
+      "region": "Silberseen",
+      "isPOI": false
+    },
+    "09.07": {
+      "owner": "neutral",
+      "terrain": "wueste",
+      "region": "Flammen-Wüste",
+      "isPOI": false
+    },
+    "10.07": {
+      "owner": "neutral",
+      "terrain": "wald",
+      "region": "Rabennest",
+      "isPOI": false
+    },
+    "11.07": {
+      "owner": "neutral",
+      "terrain": "sumpf",
+      "region": "Alte Straßen",
+      "isPOI": false
+    },
+    "12.07": {
+      "owner": "neutral",
+      "terrain": "ebene",
+      "region": "Steinkreise",
+      "isPOI": false
+    },
+    "13.07": {
+      "owner": "neutral",
+      "terrain": "berg",
+      "region": "Silberseen",
+      "isPOI": false
+    },
+    "14.07": {
+      "owner": "neutral",
+      "terrain": "sumpf",
+      "region": "Frostebenen",
+      "isPOI": false
+    },
+    "15.07": {
+      "owner": "neutral",
+      "terrain": "ebene",
+      "region": "Mondschein-Ebenen",
+      "isPOI": false
+    },
+    "16.07": {
+      "owner": "neutral",
+      "terrain": "wald",
+      "region": "Silberseen",
+      "isPOI": false
+    },
+    "17.07": {
+      "owner": "neutral",
+      "terrain": "wueste",
+      "region": "Flammen-Wüste",
+      "isPOI": false
+    },
+    "18.07": {
+      "owner": "neutral",
+      "terrain": "berg",
+      "region": "Eiswind-Berge",
+      "isPOI": false
+    },
+    "19.07": {
+      "owner": "neutral",
+      "terrain": "berg",
+      "region": "Mondschein-Ebenen",
+      "isPOI": false
+    },
+    "20.07": {
+      "owner": "neutral",
+      "terrain": "berg",
+      "region": "Rabennest",
+      "isPOI": false
+    },
+    "21.07": {
+      "owner": "neutral",
+      "terrain": "sumpf",
+      "region": "Hirschtal",
+      "isPOI": false
+    },
+    "01.08": {
+      "owner": "neutral",
+      "terrain": "wueste",
+      "region": "Adlerhorst",
+      "isPOI": false
+    },
+    "02.08": {
+      "owner": "neutral",
+      "terrain": "berg",
+      "region": "Drachenklauen-Gebirge",
+      "isPOI": false
+    },
+    "03.08": {
+      "owner": "neutral",
+      "terrain": "wueste",
+      "region": "Drachenruhe",
+      "isPOI": false
+    },
+    "04.08": {
+      "owner": "neutral",
+      "terrain": "wueste",
+      "region": "Dunkle Sümpfe",
+      "isPOI": false
+    },
+    "05.08": {
+      "owner": "neutral",
+      "terrain": "wueste",
+      "region": "Magierturm-Region",
+      "isPOI": false
+    },
+    "06.08": {
+      "owner": "neutral",
+      "terrain": "wueste",
+      "region": "Elfenreich",
+      "isPOI": false
+    },
+    "07.08": {
+      "owner": "neutral",
+      "terrain": "ebene",
+      "region": "Kriegerhügel",
+      "isPOI": false
+    },
+    "08.08": {
+      "owner": "neutral",
+      "terrain": "ebene",
+      "region": "Orkland",
+      "isPOI": false
+    },
+    "09.08": {
+      "owner": "neutral",
+      "terrain": "sumpf",
+      "region": "Frostebenen",
+      "isPOI": false
+    },
+    "10.08": {
+      "owner": "neutral",
+      "terrain": "wald",
+      "region": "Elfenreich",
+      "isPOI": false
+    },
+    "11.08": {
+      "owner": "neutral",
+      "terrain": "wueste",
+      "region": "Zwergenfeste",
+      "isPOI": false
+    },
+    "12.08": {
+      "owner": "neutral",
+      "terrain": "wald",
+      "region": "Himmelsspitzen",
+      "isPOI": false
+    },
+    "13.08": {
+      "owner": "neutral",
+      "terrain": "sumpf",
+      "region": "Alte Straßen",
+      "isPOI": false
+    },
+    "14.08": {
+      "owner": "neutral",
+      "terrain": "sumpf",
+      "region": "Frostebenen",
+      "isPOI": false
+    },
+    "15.08": {
+      "owner": "neutral",
+      "terrain": "wald",
+      "region": "Dunkle Sümpfe",
+      "isPOI": false
+    },
+    "16.08": {
+      "owner": "neutral",
+      "terrain": "berg",
+      "region": "Alte Straßen",
+      "isPOI": false
+    },
+    "17.08": {
+      "owner": "neutral",
+      "terrain": "wald",
+      "region": "Bärenwald",
+      "isPOI": true
+    },
+    "18.08": {
+      "owner": "neutral",
+      "terrain": "ebene",
+      "region": "Frostebenen",
+      "isPOI": false
+    },
+    "19.08": {
+      "owner": "neutral",
+      "terrain": "wueste",
+      "region": "Waldläufer-Territorium",
+      "isPOI": false
+    },
+    "20.08": {
+      "owner": "neutral",
+      "terrain": "wueste",
+      "region": "Kriegerhügel",
+      "isPOI": false
+    },
+    "21.08": {
+      "owner": "neutral",
+      "terrain": "sumpf",
+      "region": "Drachenklauen-Gebirge",
+      "isPOI": false
+    },
+    "01.09": {
+      "owner": "neutral",
+      "terrain": "wueste",
+      "region": "Kristallsteppe",
+      "isPOI": false
+    },
+    "02.09": {
+      "owner": "neutral",
+      "terrain": "wald",
+      "region": "Ruinenstädte",
+      "isPOI": false
+    },
+    "03.09": {
+      "owner": "neutral",
+      "terrain": "sumpf",
+      "region": "Zwergenfeste",
+      "isPOI": false
+    },
+    "04.09": {
+      "owner": "neutral",
+      "terrain": "sumpf",
+      "region": "Mondschein-Ebenen",
+      "isPOI": false
+    },
+    "05.09": {
+      "owner": "neutral",
+      "terrain": "ebene",
+      "region": "Kristallsteppe",
+      "isPOI": false
+    },
+    "06.09": {
+      "owner": "neutral",
+      "terrain": "wald",
+      "region": "Mondschein-Ebenen",
+      "isPOI": false
+    },
+    "07.09": {
+      "owner": "neutral",
+      "terrain": "wueste",
+      "region": "Nebeltal",
+      "isPOI": false
+    },
+    "08.09": {
+      "owner": "neutral",
+      "terrain": "ebene",
+      "region": "Drachenruhe",
+      "isPOI": false
+    },
+    "09.09": {
+      "owner": "neutral",
+      "terrain": "ebene",
+      "region": "Ruinenstädte",
+      "isPOI": false
+    },
+    "10.09": {
+      "owner": "neutral",
+      "terrain": "berg",
+      "region": "Elfenreich",
+      "isPOI": false
+    },
+    "11.09": {
+      "owner": "neutral",
+      "terrain": "berg",
+      "region": "Hirschtal",
+      "isPOI": false
+    },
+    "12.09": {
+      "owner": "neutral",
+      "terrain": "wueste",
+      "region": "Dunkle Sümpfe",
+      "isPOI": false
+    },
+    "13.09": {
+      "owner": "neutral",
+      "terrain": "wueste",
+      "region": "Adlerhorst",
+      "isPOI": false
+    },
+    "14.09": {
+      "owner": "neutral",
+      "terrain": "berg",
+      "region": "Frostebenen",
+      "isPOI": false
+    },
+    "15.09": {
+      "owner": "neutral",
+      "terrain": "berg",
+      "region": "Verlorene Täler",
+      "isPOI": false
+    },
+    "16.09": {
+      "owner": "neutral",
+      "terrain": "sumpf",
+      "region": "Alte Straßen",
+      "isPOI": false
+    },
+    "17.09": {
+      "owner": "neutral",
+      "terrain": "berg",
+      "region": "Donnergipfel",
+      "isPOI": false
+    },
+    "18.09": {
+      "owner": "neutral",
+      "terrain": "sumpf",
+      "region": "Himmelsspitzen",
+      "isPOI": false
+    },
+    "19.09": {
+      "owner": "neutral",
+      "terrain": "wueste",
+      "region": "Kristallsteppe",
+      "isPOI": false
+    },
+    "20.09": {
+      "owner": "neutral",
+      "terrain": "wald",
+      "region": "Steinkreise",
+      "isPOI": false
+    },
+    "21.09": {
+      "owner": "neutral",
+      "terrain": "berg",
+      "region": "Flammen-Wüste",
+      "isPOI": false
+    },
+    "01.10": {
+      "owner": "neutral",
+      "terrain": "wald",
+      "region": "Löwenland",
+      "isPOI": false
+    },
+    "02.10": {
+      "owner": "neutral",
+      "terrain": "sumpf",
+      "region": "Elfenreich",
+      "isPOI": false
+    },
+    "03.10": {
+      "owner": "neutral",
+      "terrain": "berg",
+      "region": "Mondschein-Ebenen",
+      "isPOI": false
+    },
+    "04.10": {
+      "owner": "neutral",
+      "terrain": "sumpf",
+      "region": "Sternenwald",
+      "isPOI": false
+    },
+    "05.10": {
+      "owner": "neutral",
+      "terrain": "sumpf",
+      "region": "Glutberge",
+      "isPOI": false
+    },
+    "06.10": {
+      "owner": "neutral",
+      "terrain": "ebene",
+      "region": "Wolfsschlucht",
+      "isPOI": false
+    },
+    "07.10": {
+      "owner": "neutral",
+      "terrain": "ebene",
+      "region": "Kriegerhügel",
+      "isPOI": false
+    },
+    "08.10": {
+      "owner": "neutral",
+      "terrain": "wald",
+      "region": "Flammen-Wüste",
+      "isPOI": false
+    },
+    "09.10": {
+      "owner": "neutral",
+      "terrain": "berg",
+      "region": "Dunkle Sümpfe",
+      "isPOI": false
+    },
+    "10.10": {
+      "owner": "neutral",
+      "terrain": "berg",
+      "region": "Drachenruhe",
+      "isPOI": false
+    },
+    "11.10": {
+      "owner": "neutral",
+      "terrain": "wald",
+      "region": "Zwergenfeste",
+      "isPOI": false
+    },
+    "12.10": {
+      "owner": "neutral",
+      "terrain": "sumpf",
+      "region": "Kriegerhügel",
+      "isPOI": false
+    },
+    "13.10": {
+      "owner": "neutral",
+      "terrain": "wueste",
+      "region": "Löwenland",
+      "isPOI": false
+    },
+    "14.10": {
+      "owner": "neutral",
+      "terrain": "wueste",
+      "region": "Waldläufer-Territorium",
+      "isPOI": false
+    },
+    "15.10": {
+      "owner": "neutral",
+      "terrain": "wald",
+      "region": "Zwergenfeste",
+      "isPOI": false
+    },
+    "16.10": {
+      "owner": "neutral",
+      "terrain": "wueste",
+      "region": "Ruinenstädte",
+      "isPOI": false
+    },
+    "17.10": {
+      "owner": "neutral",
+      "terrain": "wueste",
+      "region": "Sternenwald",
+      "isPOI": false
+    },
+    "18.10": {
+      "owner": "neutral",
+      "terrain": "wald",
+      "region": "Goldene Felder",
+      "isPOI": false
+    },
+    "19.10": {
+      "owner": "neutral",
+      "terrain": "ebene",
+      "region": "Flammen-Wüste",
+      "isPOI": false
+    },
+    "20.10": {
+      "owner": "neutral",
+      "terrain": "ebene",
+      "region": "Eiswind-Berge",
+      "isPOI": false
+    },
+    "21.10": {
+      "owner": "neutral",
+      "terrain": "ebene",
+      "region": "Bärenwald",
+      "isPOI": false
+    },
+    "01.11": {
+      "owner": "neutral",
+      "terrain": "wueste",
+      "region": "Orkland",
+      "isPOI": false
+    },
+    "02.11": {
+      "owner": "neutral",
+      "terrain": "ebene",
+      "region": "Donnergipfel",
+      "isPOI": false
+    },
+    "03.11": {
+      "owner": "neutral",
+      "terrain": "wald",
+      "region": "Elfenreich",
+      "isPOI": false
+    },
+    "04.11": {
+      "owner": "neutral",
+      "terrain": "sumpf",
+      "region": "Fuchshügel",
+      "isPOI": false
+    },
+    "05.11": {
+      "owner": "neutral",
+      "terrain": "wueste",
+      "region": "Silberseen",
+      "isPOI": false
+    },
+    "06.11": {
+      "owner": "neutral",
+      "terrain": "wueste",
+      "region": "Alte Straßen",
+      "isPOI": false
+    },
+    "07.11": {
+      "owner": "neutral",
+      "terrain": "sumpf",
+      "region": "Flammen-Wüste",
+      "isPOI": false
+    },
+    "08.11": {
+      "owner": "neutral",
+      "terrain": "sumpf",
+      "region": "Frostebenen",
+      "isPOI": false
+    },
+    "09.11": {
+      "owner": "neutral",
+      "terrain": "berg",
+      "region": "Hirschtal",
+      "isPOI": false
+    },
+    "10.11": {
+      "owner": "neutral",
+      "terrain": "wald",
+      "region": "Zwergenfeste",
+      "isPOI": false
+    },
+    "11.11": {
+      "owner": "neutral",
+      "terrain": "sumpf",
+      "region": "Frostebenen",
+      "isPOI": false
+    },
+    "12.11": {
+      "owner": "neutral",
+      "terrain": "wueste",
+      "region": "Goldene Felder",
+      "isPOI": false
+    },
+    "13.11": {
+      "owner": "neutral",
+      "terrain": "berg",
+      "region": "Elfenreich",
+      "isPOI": false
+    },
+    "14.11": {
+      "owner": "neutral",
+      "terrain": "ebene",
+      "region": "Elfenreich",
+      "isPOI": false
+    },
+    "15.11": {
+      "owner": "neutral",
+      "terrain": "berg",
+      "region": "Rabennest",
+      "isPOI": true
+    },
+    "16.11": {
+      "owner": "neutral",
+      "terrain": "wald",
+      "region": "Sturmküste",
+      "isPOI": false
+    },
+    "17.11": {
+      "owner": "neutral",
+      "terrain": "wueste",
+      "region": "Löwenland",
+      "isPOI": false
+    },
+    "18.11": {
+      "owner": "neutral",
+      "terrain": "wueste",
+      "region": "Magierturm-Region",
+      "isPOI": false
+    },
+    "19.11": {
+      "owner": "neutral",
+      "terrain": "berg",
+      "region": "Schattenmoor",
+      "isPOI": false
+    },
+    "20.11": {
+      "owner": "neutral",
+      "terrain": "ebene",
+      "region": "Ruinenstädte",
+      "isPOI": false
+    },
+    "21.11": {
+      "owner": "neutral",
+      "terrain": "wald",
+      "region": "Ruinenstädte",
       "isPOI": false
     }
   },
   "factions": {
-    "chaos": {
-      "name": "Chaos",
-      "points": 8,
-      "color": "#a83232"
+    "order": {
+      "name": "Order",
+      "points": 0,
+      "color": "#3498db"
     },
-    "ordnung": {
-      "name": "Ordnung",
-      "points": 12,
-      "color": "#32a852"
-    },
-    "tod": {
-      "name": "Tod",
-      "points": 6,
+    "death": {
+      "name": "Death",
+      "points": 0,
       "color": "#7e7e7e"
     },
-    "zerstoerung": {
-      "name": "Zerstörung",
-      "points": 10,
-      "color": "#a8772d"
+    "chaos": {
+      "name": "Chaos",
+      "points": 0,
+      "color": "#e74c3c"
+    },
+    "destruction": {
+      "name": "Destruction",
+      "points": 0,
+      "color": "#f39c12"
     }
   },
   "pois": [
     {
-      "id": "02.01",
-      "name": "Bergfestung des Chaos",
-      "description": "Eine alte Festung in den Bergen, von Chaos-Kriegern erobert",
-      "bonus": 2,
+      "id": "14.02",
+      "name": "Zwergenfeste tempel",
+      "description": "Ein wichtiger Ort in der Region Zwergenfeste",
+      "bonus": 3,
+      "type": "tempel"
+    },
+    {
+      "id": "20.04",
+      "name": "Steinkreise festung",
+      "description": "Ein wichtiger Ort in der Region Steinkreise",
+      "bonus": 1,
       "type": "festung"
     },
     {
-      "id": "03.03",
-      "name": "Zentraler Marktplatz",
-      "description": "Ein wichtiger Handelsplatz im Zentrum der Grenzlande",
+      "id": "07.05",
+      "name": "Sternenwald turm",
+      "description": "Ein wichtiger Ort in der Region Sternenwald",
+      "bonus": 2,
+      "type": "turm"
+    },
+    {
+      "id": "16.05",
+      "name": "Bärenwald festung",
+      "description": "Ein wichtiger Ort in der Region Bärenwald",
+      "bonus": 1,
+      "type": "festung"
+    },
+    {
+      "id": "08.06",
+      "name": "Orkland mine",
+      "description": "Ein wichtiger Ort in der Region Orkland",
+      "bonus": 2,
+      "type": "mine"
+    },
+    {
+      "id": "19.06",
+      "name": "Mondschein-Ebenen mine",
+      "description": "Ein wichtiger Ort in der Region Mondschein-Ebenen",
+      "bonus": 1,
+      "type": "mine"
+    },
+    {
+      "id": "17.08",
+      "name": "Bärenwald handel",
+      "description": "Ein wichtiger Ort in der Region Bärenwald",
       "bonus": 1,
       "type": "handel"
     },
     {
-      "id": "05.05",
-      "name": "Nekropole der Untoten",
-      "description": "Ein düsterer Ort voller untoter Energie",
+      "id": "15.11",
+      "name": "Rabennest turm",
+      "description": "Ein wichtiger Ort in der Region Rabennest",
       "bonus": 2,
-      "type": "nekropole"
-    },
-    {
-      "id": "07.03",
-      "name": "Tempel der Ordnung",
-      "description": "Ein heiliger Tempel, der Ordnung und Gerechtigkeit repräsentiert",
-      "bonus": 2,
-      "type": "tempel"
+      "type": "turm"
     }
   ],
   "regions": [
     {
-      "name": "Nordwälder",
-      "description": "Dichte Waldgebiete im Norden, reich an Holz und Wild"
+      "name": "Drachenklauen-Gebirge",
+      "description": "Ein mystisches Gebiet mit 2 bedeutsamen Orten."
     },
     {
-      "name": "Westberge",
-      "description": "Gebirgskette im Westen, schwer zugänglich aber reich an Mineralien"
+      "name": "Sternenwald",
+      "description": "Ein mystisches Gebiet mit 2 bedeutsamen Orten."
     },
     {
-      "name": "Ostebenen",
-      "description": "Weite Ebenen im Osten, ideal für Landwirtschaft und Handel"
+      "name": "Mondschein-Ebenen",
+      "description": "Ein mystisches Gebiet mit 3 bedeutsamen Orten."
     },
     {
-      "name": "Südsumpf",
-      "description": "Sumpfland im Süden, gefährlich aber magisch kraftvoll"
+      "name": "Schattenmoor",
+      "description": "Ein mystisches Gebiet mit 3 bedeutsamen Orten."
     },
     {
-      "name": "Zentrum",
-      "description": "Das Herzland der Grenzlande, umkämpft von allen Fraktionen"
+      "name": "Kristallsteppe",
+      "description": "Ein mystisches Gebiet mit 1 bedeutsamen Orten."
+    },
+    {
+      "name": "Nebeltal",
+      "description": "Ein mystisches Gebiet mit 2 bedeutsamen Orten."
+    },
+    {
+      "name": "Donnergipfel",
+      "description": "Ein mystisches Gebiet mit 3 bedeutsamen Orten."
+    },
+    {
+      "name": "Elfenreich",
+      "description": "Ein mystisches Gebiet mit 1 bedeutsamen Orten."
+    },
+    {
+      "name": "Zwergenfeste",
+      "description": "Ein mystisches Gebiet mit 3 bedeutsamen Orten."
+    },
+    {
+      "name": "Orkland",
+      "description": "Ein mystisches Gebiet mit 2 bedeutsamen Orten."
+    },
+    {
+      "name": "Magierturm-Region",
+      "description": "Ein mystisches Gebiet mit 3 bedeutsamen Orten."
+    },
+    {
+      "name": "Ruinenstädte",
+      "description": "Ein mystisches Gebiet mit 2 bedeutsamen Orten."
+    },
+    {
+      "name": "Goldene Felder",
+      "description": "Ein mystisches Gebiet mit 1 bedeutsamen Orten."
+    },
+    {
+      "name": "Eiswind-Berge",
+      "description": "Ein mystisches Gebiet mit 2 bedeutsamen Orten."
+    },
+    {
+      "name": "Flammen-Wüste",
+      "description": "Ein mystisches Gebiet mit 1 bedeutsamen Orten."
+    },
+    {
+      "name": "Geisterhafen",
+      "description": "Ein mystisches Gebiet mit 1 bedeutsamen Orten."
+    },
+    {
+      "name": "Waldläufer-Territorium",
+      "description": "Ein mystisches Gebiet mit 1 bedeutsamen Orten."
+    },
+    {
+      "name": "Dunkle Sümpfe",
+      "description": "Ein mystisches Gebiet mit 1 bedeutsamen Orten."
+    },
+    {
+      "name": "Himmelsspitzen",
+      "description": "Ein mystisches Gebiet mit 3 bedeutsamen Orten."
+    },
+    {
+      "name": "Verlorene Täler",
+      "description": "Ein mystisches Gebiet mit 1 bedeutsamen Orten."
+    },
+    {
+      "name": "Alte Straßen",
+      "description": "Ein mystisches Gebiet mit 2 bedeutsamen Orten."
+    },
+    {
+      "name": "Kriegerhügel",
+      "description": "Ein mystisches Gebiet mit 3 bedeutsamen Orten."
+    },
+    {
+      "name": "Drachenruhe",
+      "description": "Ein mystisches Gebiet mit 2 bedeutsamen Orten."
+    },
+    {
+      "name": "Silberseen",
+      "description": "Ein mystisches Gebiet mit 1 bedeutsamen Orten."
+    },
+    {
+      "name": "Sturmküste",
+      "description": "Ein mystisches Gebiet mit 2 bedeutsamen Orten."
+    },
+    {
+      "name": "Frostebenen",
+      "description": "Ein mystisches Gebiet mit 1 bedeutsamen Orten."
+    },
+    {
+      "name": "Glutberge",
+      "description": "Ein mystisches Gebiet mit 1 bedeutsamen Orten."
+    },
+    {
+      "name": "Windwiesen",
+      "description": "Ein mystisches Gebiet mit 1 bedeutsamen Orten."
+    },
+    {
+      "name": "Steinkreise",
+      "description": "Ein mystisches Gebiet mit 2 bedeutsamen Orten."
+    },
+    {
+      "name": "Rabennest",
+      "description": "Ein mystisches Gebiet mit 2 bedeutsamen Orten."
+    },
+    {
+      "name": "Löwenland",
+      "description": "Ein mystisches Gebiet mit 2 bedeutsamen Orten."
+    },
+    {
+      "name": "Bärenwald",
+      "description": "Ein mystisches Gebiet mit 3 bedeutsamen Orten."
+    },
+    {
+      "name": "Wolfsschlucht",
+      "description": "Ein mystisches Gebiet mit 1 bedeutsamen Orten."
+    },
+    {
+      "name": "Adlerhorst",
+      "description": "Ein mystisches Gebiet mit 1 bedeutsamen Orten."
+    },
+    {
+      "name": "Fuchshügel",
+      "description": "Ein mystisches Gebiet mit 2 bedeutsamen Orten."
+    },
+    {
+      "name": "Hirschtal",
+      "description": "Ein mystisches Gebiet mit 1 bedeutsamen Orten."
     }
   ],
-  "history": [
-    {
-      "id": 1,
-      "timestamp": "2024-01-15T10:30:00.000Z",
-      "gameSystem": "Age of Sigmar",
-      "winner": "ordnung",
-      "loser": "chaos",
-      "hexId": "07.03",
-      "region": "Ostebenen",
-      "description": "Ordnung erobert den Tempel zurück",
-      "points": 3,
-      "paintBonus": true,
-      "storyBonus": false
-    },
-    {
-      "id": 2,
-      "timestamp": "2024-01-14T14:15:00.000Z",
-      "gameSystem": "Warhammer 40k",
-      "winner": "zerstoerung",
-      "loser": "neutral",
-      "hexId": "04.01",
-      "region": "Westberge",
-      "description": "Zerstörung breitet sich in den Bergen aus",
-      "points": 2,
-      "paintBonus": false,
-      "storyBonus": true
-    },
-    {
-      "id": 3,
-      "timestamp": "2024-01-13T16:45:00.000Z",
-      "gameSystem": "Age of Sigmar",
-      "winner": "tod",
-      "loser": "ordnung",
-      "hexId": "05.05",
-      "region": "Südsumpf",
-      "description": "Die Untoten verstärken ihre Nekropole",
-      "points": 3,
-      "paintBonus": true,
-      "storyBonus": true
-    }
-  ],
+  "history": [],
   "settings": {
-    "mapWidth": 800,
-    "mapHeight": 600,
-    "hexSize": 30,
+    "mapWidth": 1200,
+    "mapHeight": 800,
+    "hexSize": 25,
     "adminMode": false,
-    "campaignName": "Die Vier Fraktionen",
-    "campaignDescription": "Eine epische Kampagne um die Vorherrschaft in den Grenzlanden"
+    "campaignName": "Fantasy Kampagnen Karte",
+    "campaignDescription": "Eine epische Kampagne in fantastischen Landen"
   }
 }
-

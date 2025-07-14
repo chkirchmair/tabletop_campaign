@@ -9,12 +9,15 @@ class CampaignMap {
         this.svg = null;
         this.mapGroup = null;
         this.selectedHex = null;
+        this.selectedRegion = null;
+        this.regionMode = false; // Toggle zwischen Hex- und Region-Auswahl
         this.zoomLevel = 1;
         this.zoomMin = 0.5;
         this.zoomMax = 3;
         this.zoomStep = 0.2;
-        this.hexSize = 30;
+        this.hexSize = 25; // Angepasst für 21x11 Grid
         this.hexes = new Map();
+        this.regions = new Map();
         this.tooltip = null;
         
         // Hexagon-Koordinaten für ein regelmäßiges Sechseck
@@ -174,7 +177,11 @@ class CampaignMap {
         // Event-Listener
         hexGroup.addEventListener('click', (e) => {
             e.stopPropagation();
-            this.selectHex(hexId, hexData);
+            if (this.regionMode) {
+                this.selectRegion(hexData.region);
+            } else {
+                this.selectHex(hexId, hexData);
+            }
         });
         
         hexGroup.addEventListener('mouseenter', (e) => {
@@ -288,6 +295,111 @@ class CampaignMap {
     }
 
     /**
+     * Selektiert eine ganze Region
+     */
+    selectRegion(regionName) {
+        // Vorherige Selektion entfernen
+        this.clearRegionSelection();
+        
+        this.selectedRegion = regionName;
+        
+        // Alle Hexfelder der Region hervorheben
+        this.updateRegionSelection();
+        
+        // Region-Auswahl UI aktualisieren
+        this.updateRegionUI();
+        
+        console.log(`Region ${regionName} ausgewählt`);
+    }
+
+    /**
+     * Entfernt die Region-Selektion
+     */
+    clearRegionSelection() {
+        if (this.selectedRegion) {
+            // Alle Hexfelder der vorherigen Region de-highlighten
+            this.hexes.forEach((hexElement, hexId) => {
+                const hexPath = hexElement.querySelector('.hex');
+                if (hexPath) {
+                    hexPath.classList.remove('region-selected');
+                }
+            });
+        }
+        
+        this.selectedRegion = null;
+        this.updateRegionUI();
+    }
+
+    /**
+     * Aktualisiert die visuelle Region-Selektion
+     */
+    updateRegionSelection() {
+        if (!this.selectedRegion) return;
+        
+        // Aktuelle State holen
+        const state = campaignState.getState();
+        
+        // Alle Hexfelder der ausgewählten Region highlighten
+        Object.entries(state.hexes || {}).forEach(([hexId, hexData]) => {
+            if (hexData.region === this.selectedRegion && this.hexes.has(hexId)) {
+                const hexElement = this.hexes.get(hexId);
+                const hexPath = hexElement.querySelector('.hex');
+                if (hexPath) {
+                    hexPath.classList.add('region-selected');
+                }
+            }
+        });
+    }
+
+    /**
+     * Aktualisiert die Region-Auswahl UI
+     */
+    updateRegionUI() {
+        // Region-Display aktualisieren
+        const regionDisplay = document.getElementById('selectedRegionDisplay');
+        if (regionDisplay) {
+            if (this.selectedRegion) {
+                regionDisplay.textContent = `Ausgewählte Region: ${this.selectedRegion}`;
+                regionDisplay.style.display = 'block';
+            } else {
+                regionDisplay.style.display = 'none';
+            }
+        }
+
+        // Zielregion im Formular setzen
+        const targetRegionField = document.getElementById('targetRegion');
+        if (targetRegionField) {
+            targetRegionField.value = this.selectedRegion || '';
+        }
+    }
+
+    /**
+     * Schaltet zwischen Hex- und Region-Modus um
+     */
+    toggleRegionMode() {
+        this.regionMode = !this.regionMode;
+        
+        // Aktuelle Selektion löschen
+        this.clearSelection();
+        this.clearRegionSelection();
+        
+        // Mode-Button aktualisieren
+        const modeButton = document.getElementById('regionModeToggle');
+        if (modeButton) {
+            modeButton.textContent = this.regionMode ? '🗺️ Hex-Modus' : '🏰 Region-Modus';
+            modeButton.title = this.regionMode ? 'Zu Hex-Auswahl wechseln' : 'Zu Region-Auswahl wechseln';
+        }
+        
+        // Status anzeigen
+        const statusDisplay = document.getElementById('selectionModeDisplay');
+        if (statusDisplay) {
+            statusDisplay.textContent = this.regionMode ? 'Region-Auswahl aktiv' : 'Hex-Auswahl aktiv';
+        }
+        
+        console.log(`Modus gewechselt: ${this.regionMode ? 'Region' : 'Hex'}`);
+    }
+
+    /**
      * Zeigt Tooltip an
      */
     showTooltip(event, hexId, hexData) {
@@ -370,6 +482,22 @@ class CampaignMap {
         if (clearHexButton) {
             clearHexButton.addEventListener('click', () => {
                 this.clearSelection();
+            });
+        }
+
+        // Clear-Button für Region-Selektion
+        const clearRegionButton = document.getElementById('clearRegion');
+        if (clearRegionButton) {
+            clearRegionButton.addEventListener('click', () => {
+                this.clearRegionSelection();
+            });
+        }
+
+        // Region-Modus Toggle Button
+        const regionModeToggle = document.getElementById('regionModeToggle');
+        if (regionModeToggle) {
+            regionModeToggle.addEventListener('click', () => {
+                this.toggleRegionMode();
             });
         }
     }
