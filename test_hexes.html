@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hex Test</title>
+    <style>
+        body { background: #1a1a2e; color: white; padding: 20px; }
+        .info { margin: 20px 0; }
+        #testMap { background: #2a2a3e; border: 1px solid #444; }
+        .hex { cursor: pointer; }
+        .hex:hover { opacity: 0.8; }
+    </style>
+</head>
+<body>
+    <div class="info">
+        <h1>Hexfeld-Test für 21x11 Grid</h1>
+        <p>Diese Seite testet die Hexfeld-Generierung für die Kampagnenkarte.</p>
+        <div id="hexCount">Lade Hexfelder...</div>
+    </div>
+    
+    <svg id="testMap" width="800" height="600" viewBox="0 0 800 600">
+        <!-- Hexfelder werden hier generiert -->
+    </svg>
+
+    <script>
+        // Vereinfachte Hex-Generierung zum Testen
+        function generateTestHexes() {
+            const svg = document.getElementById('testMap');
+            const hexSize = 15;
+            let hexCount = 0;
+            
+            // 21x11 Grid generieren
+            for (let col = 1; col <= 21; col++) {
+                for (let row = 1; row <= 11; row++) {
+                    const hexId = `${col.toString().padStart(2, '0')}.${row.toString().padStart(2, '0')}`;
+                    
+                    // Position berechnen
+                    const width = hexSize * 2;
+                    const height = hexSize * Math.sqrt(3);
+                    const x = (col - 1) * width * 0.75;
+                    const y = (row - 1) * height + ((col - 1) % 2) * height / 2;
+                    
+                    // Hexagon erstellen
+                    const hexGroup = document.createElementNS('http://www.w3.org/2000/svg', 'g');
+                    hexGroup.setAttribute('transform', `translate(${x + 50}, ${y + 50})`);
+                    
+                    const hexPath = document.createElementNS('http://www.w3.org/2000/svg', 'polygon');
+                    const coords = [];
+                    for (let i = 0; i < 6; i++) {
+                        const angle = (i * 60) * Math.PI / 180;
+                        const hx = Math.cos(angle) * hexSize;
+                        const hy = Math.sin(angle) * hexSize;
+                        coords.push(`${hx},${hy}`);
+                    }
+                    hexPath.setAttribute('points', coords.join(' '));
+                    hexPath.setAttribute('fill', '#7a8450');
+                    hexPath.setAttribute('stroke', '#444');
+                    hexPath.setAttribute('stroke-width', '1');
+                    hexPath.setAttribute('class', 'hex');
+                    
+                    // Label
+                    const label = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+                    label.setAttribute('x', 0);
+                    label.setAttribute('y', 3);
+                    label.setAttribute('text-anchor', 'middle');
+                    label.setAttribute('font-size', '8');
+                    label.setAttribute('fill', 'white');
+                    label.textContent = hexId;
+                    
+                    hexGroup.appendChild(hexPath);
+                    hexGroup.appendChild(label);
+                    svg.appendChild(hexGroup);
+                    
+                    hexCount++;
+                }
+            }
+            
+            document.getElementById('hexCount').textContent = `${hexCount} Hexfelder generiert (Soll: 231)`;
+        }
+        
+        // Nach dem Laden der Seite
+        document.addEventListener('DOMContentLoaded', () => {
+            generateTestHexes();
+        });
+    </script>
+</body>
+</html>
